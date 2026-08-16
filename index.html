@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUTE HACKER Sim DataBase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        :root {
+            --primary: #ffff00; /* VIP Yellow */
+            --accent: #ff1493;  /* Changed to Dark Pink */
+            --bg-main: #070708;
+            --panel-bg: rgba(16, 16, 20, 0.9);
+            --border: #ffff00;
+            --text-glow: 0 0 12px rgba(255, 255, 0, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        #matrixBg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            opacity: 0.12;
+        }
+
+        #lockScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(4, 4, 6, 0.98);
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid var(--accent);
+        }
+
+        .lock-card {
+            background: #0d0d11;
+            padding: 40px;
+            border-radius: 4px;
+            border: 2px solid var(--primary);
+            text-align: center;
+            max-width: 420px;
+            box-shadow: 0 0 25px rgba(255, 20, 147, 0.2);
+        }
+
+        .lock-card h2 {
+            font-size: 26px;
+            color: var(--accent);
+            margin: 15px 0 10px;
+            letter-spacing: 4px;
+            text-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
+        }
+
+        .btn-unlock {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 14px 28px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: var(--text-glow);
+        }
+
+        .btn-unlock:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .banner-container {
+            max-width: 750px;
+            margin: 35px auto 15px;
+            text-align: center;
+            border: 3px double var(--accent);
+            background: linear-gradient(135deg, rgba(25, 5, 20, 0.85) 0%, rgba(10, 10, 14, 0.9) 100%);
+            padding: 35px 25px;
+            box-shadow: 0 0 30px rgba(255, 20, 147, 0.4), inset 0 0 15px rgba(255, 20, 147, 0.2);
+            position: relative;
+        }
+
+        .banner-container::before {
+            content: '▲ CRITICAL CORE ACCESS ▲';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #fff;
+            padding: 2px 15px;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .banner-title {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 2px #fff;
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            animation: pulse 2.5s infinite;
+        }
+
+        .not-found {
+            text-align: center;
+            color: var(--accent);
+            background: rgba(30, 5, 20, 0.9);
+            padding: 25px;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+            font-weight: bold;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); text-shadow: 0 0 20px rgba(255,20,147,0.8); }
+            50% { transform: scale(1.03); text-shadow: 0 0 30px rgba(255,20,147,1), 0 0 10px rgba(255,255,0,0.5); }
+            100% { transform: scale(1); text-shadow: 0 0 20px rgba(255,20,147,0.8); }
+        }
+
+        /* Baaki code same rahega... */
+    </style>
+</head>
+<body>
+    <!-- (Baaki ka code jo pehle tha, waisa hi rahega) -->
+</body>
+</html>
